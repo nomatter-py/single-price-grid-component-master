@@ -2,5 +2,110 @@
 
 body{
     font-family: $font;
+    font-weight: 400;
     font-size: 16px;
+    line-height: 2;
+    background-color: $light_gray_color;
+}
+
+
+h1{
+   color: $cyan_color;
+   margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 17px;
+    margin-bottom: 0.8rem;
+}
+
+.details{
+    color: #b5dbe1;
+}
+
+.price-component{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+   // height: 500px;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 5px 5px 20px #d1cdcd, -5px -5px 20px #d1cdcd;
+    border-radius: 10px;
+
+    @media only screen and (max-width: $md) {
+        position: static;
+        grid-template-columns: repeat(1, 1fr);
+        width:80%;
+        transform: unset;
+        margin: 2rem auto;
+    }
+
+ 
+    &__main-information{
+        grid-column: 1 / span 3;
+        color: $grayish_blue_color;
+        background-color: #fff;
+        padding: 3rem;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        
+        h2{
+            color: $bright_yellow_color;
+        }
+
+        @media only screen and (max-width: $md) {
+            grid-column: 1;
+        }
+    }
+
+    &__price{
+        color: #fff;
+        background-color: $cyan_color;
+        padding: 3rem;
+        border-bottom-left-radius: 10px;
+
+        .price-block{
+            display: flex;
+            align-items: center;
+            height: 50px;
+        }        
+
+        .price{
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        button{
+            font-family: $font;
+            font-size: 16px;
+            color: #fff;
+            margin-top: 2.5rem;
+            padding: 1rem;
+            width: 100%;
+            background-color: $bright_yellow_color;
+            border: 2px solid darkcyan;
+            border-radius: 5px;
+        }
+
+        @media only screen and (max-width: $md) {
+           border-radius: unset;
+        }
+    }
+
+    &__about-us{
+        color: #fff;
+        background-color: $cyan_color;
+        opacity: 0.8;
+        padding: 3rem;
+        border-bottom-right-radius: 10px;
+
+        @media only screen and (max-width: $md) {
+            border-bottom-left-radius: 10px;    
+        }
+
+
+    }
 }

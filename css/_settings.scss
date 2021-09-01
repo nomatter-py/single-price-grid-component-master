@@ -2,8 +2,21 @@
 
 $font: 'Karla', sans-serif;
 
+$cyan_color: hsl(179, 62%, 43%);
+$bright_yellow_color:  hsl(71, 73%, 54%);
+
+$light_gray_color: hsl(204, 43%, 93%);
+$grayish_blue_color: hsl(218, 22%, 67%);
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
+
+
+$xs: 320px; 
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

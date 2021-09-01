@@ -8,6 +8,127 @@
 
 body {
   font-family: "Karla", sans-serif;
+  font-weight: 400;
   font-size: 16px;
+  line-height: 2;
+  background-color: #e5eff5;
+}
+
+h1 {
+  color: #2ab2af;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 17px;
+  margin-bottom: 0.8rem;
+}
+
+.details {
+  color: #b5dbe1;
+}
+
+.price-component {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-shadow: 5px 5px 20px #d1cdcd, -5px -5px 20px #d1cdcd;
+          box-shadow: 5px 5px 20px #d1cdcd, -5px -5px 20px #d1cdcd;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .price-component {
+    position: static;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+    -webkit-transform: unset;
+            transform: unset;
+    margin: 2rem auto;
+  }
+}
+
+.price-component__main-information {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  color: #98a6bd;
+  background-color: #fff;
+  padding: 3rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.price-component__main-information h2 {
+  color: #c0df34;
+}
+
+@media only screen and (max-width: 768px) {
+  .price-component__main-information {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+.price-component__price {
+  color: #fff;
+  background-color: #2ab2af;
+  padding: 3rem;
+  border-bottom-left-radius: 10px;
+}
+
+.price-component__price .price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+.price-component__price .price {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.price-component__price button {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 2.5rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #c0df34;
+  border: 2px solid darkcyan;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .price-component__price {
+    border-radius: unset;
+  }
+}
+
+.price-component__about-us {
+  color: #fff;
+  background-color: #2ab2af;
+  opacity: 0.8;
+  padding: 3rem;
+  border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .price-component__about-us {
+    border-bottom-left-radius: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
